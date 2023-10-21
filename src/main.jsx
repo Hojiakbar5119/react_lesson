@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Fruit from './furit';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <h1>Salom dunyo</h1>
-
-  </React.StrictMode>,
-)
+    <Fruit/>
+  </React.StrictMode>
+);
