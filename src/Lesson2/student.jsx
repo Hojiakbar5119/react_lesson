@@ -4,26 +4,25 @@ class Student extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            counts : 1, 
+            counts : 0, 
+            title: 'webbrain academy'
         }
 
     }
     render(){
         let counts = 0;
         const plus=()=>{
-            console.log(counts)
-            counts = counts +1;
+            this.setState({counts: this.state.counts+1})
         }
         const minus=()=>{
-            console.log(counts)
-            counts = counts -1;
+            this.setState({counts: this.state.counts-1})
         }
 
-        const timeout = setTimeout((a)=>{
-            console.log("Vaqt hisoblandi",a);
-        },2000,"Rostan shunaqami")
+        // const timeout = setTimeout((a)=>{
+        //     console.log("Vaqt hisoblandi",a);
+        // },2000,"Rostan shunaqami")
 
-        timeout
+        // timeout
         // time settimeout  bu bir marta ishlaydi 
         //? time setinterval bu nir necha marta ishlash mumkin
         // const timeInterval = setInterval(()=>{
@@ -36,9 +35,14 @@ class Student extends React.Component{
         return(
             <div>
                 {/* <h1>Student Component</h1> */}
+
                 <h1>State {this.state.counts}</h1>
+                <div style={{margin:'0 auto'}}>
                 <button onClick={plus}>+</button>
-                <button onClick={minus}>-</button>
+                <button onClick={minus} style={{margin:'20px'}}>-</button>
+                </div>
+
+                <h4>{this.state.title}</h4>
 
             </div>
         )
