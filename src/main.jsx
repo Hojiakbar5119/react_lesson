@@ -10,5 +10,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Fruit /> */}
     {/* <Student/>   */}
     <FunctionCall/>
+    
   </React.StrictMode>
 );
