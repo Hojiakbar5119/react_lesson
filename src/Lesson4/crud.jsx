@@ -10,7 +10,9 @@ class Crud extends React.Component {
         this.state = {
             base: student,
             name: '',
-            status: ''
+            status: '',
+            search: 'name',
+            active: null,
         }
     }
     render() {
@@ -25,7 +27,8 @@ class Crud extends React.Component {
         }
         const onFilter = (e) => {
             // console.log(e.target.value.toLowerCase())
-            let res = student.filter((value) => value.name.toLowerCase().includes(e.target.value.toLowerCase()))
+            const { value } = e.target;
+            let res = student.filter((item) => `${item[this.state.search]}`.toLowerCase().includes(value.toLowerCase()))
             this.setState({ base: res })
         }
         const onAdd = (user) => {
@@ -34,8 +37,18 @@ class Crud extends React.Component {
                 name: this.state.name,
                 status: this.state.status.toLocaleUpperCase()
             }
-            this.setState({base:[...this.state.base,user], name: '', status: '' })
-            console.log(user);
+            this.setState({ base: [...this.state.base, user], name: '', status: '' })
+            // console.log(user);
+        }
+        const onSelect = (e) => {
+            // console.log(e.target.value);
+            this.setState({ search: e.target.value })
+        }
+        const onEdit=(id, name, status)=>{
+            console.log(id, name, status);
+            this.setState({
+                active: {id, name, status}
+            })
         }
         return (
             <div className="container">
@@ -46,15 +59,17 @@ class Crud extends React.Component {
                     <input value={this.state.name} onChange={onChange} type="text" name='name' placeholder="Name" />
                     <input value={this.state.status} onChange={onChange} type="text" name='status' placeholder="Status" />
                     <button onClick={onAdd}>Add</button>
+                    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                        <h3>Ismi: &nbsp; {this.state.name}</h3>
+                        <h3>Status: &nbsp; {this.state.status}</h3>
+                    </div>
                     <hr />
-                    <select name="" id="">
-                        <option value="id">Id</option>
-                        <option value="id">Name</option>
-                        <option value="id">Status</option>
+                    <select onChange={onSelect} name="" id="">
+                        <option value="name">Name</option>
+                        <option value="id">ID</option>
+                        <option value="status">Status</option>
                     </select>
-                    <input onChange={onFilter} type="text" name='filter' placeholder="filter" />
-                    <h3>Ismi: &nbsp; {this.state.name}</h3>
-                    <h3>Status: &nbsp; {this.state.status}</h3>
+                    <input onChange={onFilter} type="text" placeholder="search" />
                 </div>
                 <div className="table">
                     <table border={'1'}>
@@ -75,7 +90,7 @@ class Crud extends React.Component {
                                                 <td>{name}</td>
                                                 <td>{status}</td>
                                                 <td><button onClick={() => Ondelete(id)}>Delete</button></td>
-                                                <td><button>Edit</button></td>
+                                                <td><button onClick={()=>onEdit({id,name,status})}>Edit</button></td>
                                             </tr>
                                         )
                                     }) : <tr>
