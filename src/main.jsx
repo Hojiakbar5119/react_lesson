@@ -13,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Student/>   */}
     {/* <FunctionCall/> */}
     {/* <Crud/> */}
+    {/* <LearnComponent/> */}
     <LearnComponent/>
   </React.StrictMode>
 );

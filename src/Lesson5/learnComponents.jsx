@@ -1,13 +1,20 @@
 import React from "react";
-import { Components } from "./style";
-class LearnComponent extends React.Component{
-    render(){
-        return(
-            <div>
-                <p>Shunaqa</p>
-                <h1>Learning react components</h1>
-            </div>
-        )
-    }
+import { Title, Wrapper, Container } from "./style";
+class LearnComponent extends React.Component {
+  render() {
+    return (
+      <Container>
+        <Wrapper>
+          <Title>Hello World!</Title>
+        </Wrapper>
+        <Wrapper>
+          <Title>Hello World!</Title>
+        </Wrapper>
+        <Wrapper>
+          <Title>Hello World!</Title>
+        </Wrapper>
+      </Container>
+    );
+  }
 }
-export default LearnComponent
+export default LearnComponent;
