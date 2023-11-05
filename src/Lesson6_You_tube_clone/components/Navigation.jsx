@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Category, Wrapper,Image,Input,SearchIcons, MicIcons} from "../style";
-import burger from '../assets/hamburger.svg'
+import burger from '../assets/logo/hamburger.svg'
 import Logo from '../assets/logo/Youtube-Logo.svg'
-import search from '../assets/search.svg'
-import mic from '../assets/mic.svg'
-import create from '../assets/create.svg'
-import apps from '../assets/apps.svg'
-import notifications from '../assets/notifications.svg'
+import search from '../assets/logo/search.svg'
+import mic from '../assets/logo/mic.svg'
+import create from '../assets/logo/create.svg'
+import apps from '../assets/logo/apps.svg'
+import notifications from '../assets/logo/notifications.svg'
 import avatar from '../assets/img/User-Avatar-1.png'
 
 export default class Navigation extends Component {

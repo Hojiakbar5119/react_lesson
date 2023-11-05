@@ -1,12 +1,15 @@
 import React from 'react'
-import {Sidebars } from '../style'
+// import {sidebarlogo} from './StyleSidebar'
+import {IconsBtn, Sidebars } from '../style'
 
 
 class Sidebar extends React.Component {
   render() {
     return (
       <div>
-        <Sidebars>Hello monday</Sidebars>
+        <Sidebars>
+          <h1>404 not bad workigng style </h1>
+        </Sidebars>
       </div>
     )
   }

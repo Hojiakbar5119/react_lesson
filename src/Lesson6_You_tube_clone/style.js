@@ -70,3 +70,6 @@ export const MicIcons = styled.button`
   margin-left: 8px;
   background-color: black;
 `;
+export const IconsBtn = styled.button`
+
+`

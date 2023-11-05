@@ -12,9 +12,7 @@ export default class YouTube extends React.Component {
         <Container>
           <Navigation></Navigation>
           <Container flex>
-            <Sidebar>
-              
-            </Sidebar>
+            <Sidebar/>
             <Body></Body>
           </Container>
         </Container>
