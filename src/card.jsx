@@ -6,7 +6,7 @@ export default class Card extends Component {
     return (
       <>
         <Reactangle>
-          <Circle>
+          <Circle style={{backgroundColor: this.props.color}}>
             <Image src={this.props.Icon} alt={this.props.title}/>
             {/* <Image src={require("./img/" + this.props.Icon + ".svg")} /> */}
           </Circle>

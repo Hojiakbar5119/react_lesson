@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+// import base from './base'
 export const Container = styled.div`
   background-color: rgb(255, 192, 213);
   width: 100vw;
@@ -62,7 +62,7 @@ export const Circle = styled.div`
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background-color: #fff787;
+  /* background-color: #fff787; */
   display: flex;
   justify-content: center;
   align-items: center;
