@@ -14,7 +14,7 @@ class App extends Component {
           <Fruit>Fruit</Fruit>
           <Grids>
           {base.map((value)=>(
-            <Card key={value.id} title={value.title} Icon= {value.Icon} />
+            <Card key={value.id} title={value.title} Icon= {value.Icon} color={value.color} />
           ))}
           </Grids>
         </Wrapper>
