@@ -10,6 +10,7 @@ import Lifecycyle from "./Lesson7/lifecycyle";
 import Hook from "./Lesson8/Hook";
 import Content from "./Lesson9/Content";
 import Hooks from "./Lesson10/hooks";
+import Fetch from "./Lesson11/Fetch";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -23,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     {/* <Lifecycyle></Lifecycyle> */}
     {/* <Hook/> */}
-    <Hooks/>
+    {/* <Hooks/> */}
     {/* <Content /> */}
+
+    <Fetch/>
   </React.StrictMode>
 );
