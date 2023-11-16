@@ -9,6 +9,7 @@ import YouTube from "./Lesson6_You_tube_clone";
 import Lifecycyle from "./Lesson7/lifecycyle";
 import Hook from "./Lesson8/Hook";
 import Content from "./Lesson9/Content";
+import Hooks from "./Lesson10/hooks";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -22,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     {/* <Lifecycyle></Lifecycyle> */}
     {/* <Hook/> */}
-
-    <Content />
+    <Hooks/>
+    {/* <Content /> */}
   </React.StrictMode>
 );
