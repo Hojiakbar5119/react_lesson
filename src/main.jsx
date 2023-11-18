@@ -11,6 +11,7 @@ import Hook from "./Lesson8/Hook";
 import Content from "./Lesson9/Content";
 import Hooks from "./Lesson10/hooks";
 import Fetch from "./Lesson11/Fetch";
+import Routers from "./Lesson12/Routers";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Hooks/> */}
     {/* <Content /> */}
 
-    <Fetch/>
+    <Routers />
+    {/* <Fetch/> */}
   </React.StrictMode>
 );
